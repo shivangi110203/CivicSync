@@ -1,35 +1,98 @@
 # CivicSync
 
-CivicSync is a platform aimed at streamlining and enhancing civic engagement between citizens and their government. It empowers users to report civic issues, collaborate, and monitor their resolution process. With features like real-time mapping, issue tracking, and emergency alerts, CivicSync revolutionizes public services.
+CivicSync is a full-stack civic engagement and issue resolution platform designed to bridge the communication gap between citizens and government authorities. The platform enables users to report civic issues such as potholes, garbage overflow, water leakages, road blockades, and electricity failures using geo-tagged locations and image uploads.
 
-## How to Run
+With features like real-time issue mapping, community participation, issue tracking, and emergency alerts, CivicSync promotes transparency, accountability, and faster civic problem resolution.
 
-### Frontend
-1. Navigate to the frontend directory: `cd frontend/`
-2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
+---
 
-### Backend
-1. Navigate to the backend directory: `cd Backend/`
-2. Set up a virtual environment: `python -m venv venv`
-3. Activate the virtual environment:
-   - On Windows: `./venv/Scripts/activate`
-   - On macOS/Linux: `source venv/bin/activate`
-4. Install Python dependencies: `pip install -r requirements.txt`
-5. Navigate to the `hack24` directory: `cd hack24/`
-6. Apply database migrations: `python manage.py migrate` (when there are database changes)
-7. Run the Django development server: `python manage.py runserver 8001`
+# Features
 
-#### Creating a Superuser
-- To create a superuser for accessing the Django admin interface, run: `python manage.py createsuperuser` and follow the prompts.
+- Geo-tagged civic issue reporting
+- Real-time Google Maps integration
+- Community upvoting and commenting
+- Issue lifecycle tracking (Open → Under Review → Resolved)
+- Emergency alert notification system
+- Government dashboard for issue management
+- Responsive and user-friendly interface
 
-## Description
+---
 
-In a world marked by communication gaps between citizens and government, CivicSync emerges as the solution to streamline and enhance civic engagement. Frustrated with potholes, garbage collection issues, or other civic concerns? CivicSync empowers users to report problems with images and precise locations. Our unique platform allows users to collaborate, upvote, and comment on reported issues, fostering a community-driven approach to problem-solving.
+# Tech Stack
 
-By integrating the Google Maps API, CivicSync provides a real-time, visual map of open issues, promoting transparency. Government officials actively engage, updating the status of each problem and ensuring accountability. With a comprehensive issue tracking system, users can monitor the progress of their reported problems—from being open, under review, to resolved—complete with a timeline for enhanced visibility into the resolution process.
+## Frontend
+- React.js
+- Next.js
+- Vite
+- Material UI
 
-In emergencies, CivicSync delivers instant alerts directly to users' phones, keeping citizens informed about road blockades, water, or electricity-related issues. CivicSync isn't just a platform; it's a game-changer, transforming the dynamics between citizens and their government. Join us in revolutionizing public services, where your voice matters, and CivicSync is the conduit for change.
+## Backend
+- Django
+- Django REST Framework
 
-## Contributors:
-1. [Shivangi]
+## Database
+- PostgreSQL
+
+## APIs & Services
+- Google Maps API
+- Cloudinary
+
+---
+
+# How to Run the Project
+
+## Frontend Setup
+
+1. Navigate to the frontend directory:
+
+```bash
+cd Frontend
+Install dependencies:
+npm install
+Start the frontend server:
+npm run dev
+
+Frontend will run on:
+
+http://localhost:3000
+Backend Setup
+Navigate to the backend directory:
+cd Backend
+Create virtual environment:
+python -m venv venv
+Activate virtual environment:
+Windows
+venv\Scripts\activate
+macOS/Linux
+source venv/bin/activate
+Install dependencies:
+pip install -r requirements.txt
+Navigate to Django project folder:
+cd hack24
+Apply migrations:
+python manage.py migrate
+Run backend server:
+python manage.py runserver 8001
+
+Backend will run on:
+
+http://127.0.0.1:8001/
+Admin Access
+
+To create a Django admin superuser:
+
+python manage.py createsuperuser
+
+Then access admin panel at:
+
+http://127.0.0.1:8001/admin/
+Project Description
+
+CivicSync transforms traditional civic complaint systems into an interactive, transparent, and community-driven platform. Citizens can submit complaints with images and precise GPS-based locations, while government officials can monitor, update, and resolve issues through a dedicated management dashboard.
+
+The platform integrates Google Maps for real-time issue visualization and includes community engagement features such as upvoting and commenting to help prioritize critical problems. An emergency alert system further keeps citizens informed about road blockades, water supply disruptions, and other urgent public issues.
+
+By combining modern web technologies with civic participation, CivicSync aims to create smarter, more responsive communities.
+
+Contributors
+Shivangi Sharma
